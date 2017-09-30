@@ -1,0 +1,523 @@
+
+<!-- saved from url=(0057)http://bangladesh.asinha.co.in/panel/manageindustries.php -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title id="titl"></title>
+<link rel="stylesheet" href="./Construction Industry_files/dropdown.css">
+<link href="./Construction Industry_files/metro-bootstrap.css" rel="stylesheet">
+<link href="./Construction Industry_files/metro-bootstrap-responsive.css" rel="stylesheet">
+<script src="./Construction Industry_files/jquery.min.js.download"></script>
+<script src="./Construction Industry_files/metro.min.js.download"></script>
+<script type="text/javascript" src="./Construction Industry_files/jquery-ui-1.8.16.custom.min.js.download"></script>
+
+<script src="./Construction Industry_files/jquery.mousewheel.js.download"></script>
+<script src="./Construction Industry_files/jquery.easing.1.3.min.js.download"></script>
+<script src="./Construction Industry_files/prettify.js.download"></script>
+<script src="./Construction Industry_files/holder.js.download"></script>
+
+<script type="text/javascript" src="./Construction Industry_files/handlebars-1.0.0.beta.6.js.download"></script>
+<script type="text/javascript" src="./Construction Industry_files/jquery.jtable.js.download"></script>
+<link rel="stylesheet" href="./Construction Industry_files/jtable.css">
+
+<link rel="stylesheet" href="./Construction Industry_files/jquery-ui.css">
+<script type="text/javascript" src="./Construction Industry_files/jquery.validationEngine-en.js.download"></script>
+<script type="text/javascript" src="./Construction Industry_files/jquery.validationEngine.js.download"></script>
+<script type="text/javascript" src="./Construction Industry_files/jquery.maskMoney.js.download"></script>
+<script type="text/javascript" src="./Construction Industry_files/jquery.mask.min.js.download"></script>
+<script type="text/javascript" src="./Construction Industry_files/jquery.tinymce.min.js.download"></script>
+
+<link rel="stylesheet" href="./Construction Industry_files/validationEngine.jquery.css">
+<script type="text/javascript" src="./Construction Industry_files/jquery.select-to-autocomplete.js.download"></script>
+<style type="text/css">
+.ui-dialog
+{
+left:50% !important;
+top:50% !important;
+transform: translateY(-50%) translateX(-50%);
+-webkit-transform: translateY(-50%) translateX(-50%);
+}
+.window
+{
+left:30% !important;
+top:30% !important;
+}
+.img-responsive
+{
+	max-width:100%;
+}
+.overlay
+{
+	position:fixed;
+	top:0px;
+	left:0px;
+	height:100%;
+	width:100%;
+	background:#fff;
+	opacity:0.6;
+	z-index:10000;
+	display:none
+}
+.loader
+{
+	position:fixed;
+	top:30%;
+	left:40%;
+	background:#fff;
+	opacity:1;
+	z-index:10001;
+	display:none
+}
+.show
+{
+	display:block !important;
+}
+.ui-autocomplete
+{
+	left:312px !important;
+	top:35px !important;
+	padding-left:0px !important;
+}
+</style>
+<script type="text/x-handlebars-template" id="upload-pagelet">
+
+        
+	<form enctype="multipart/form-data" id="upForm" method="post" action="getUpload.php?specific=upformat&testid={{testid}}" target="ifr">
+<input type="file" id="fyl" name="file" style="display:none"/>
+</form>
+<iframe id="ifr" name="ifr" style="display:none" src="" ></iframe>
+
+</script>
+<script type="text/x-handlebars-template" id="filter-pagelet">
+{{#Options}}
+	<option value="{{Value}}">{{DisplayText}}</option>
+{{/Options}}
+</script>
+
+<style id="holderjs-style" type="text/css"></style><link rel="stylesheet" href="./Construction Industry_files/skin.min.css"></head>
+<body class="metro">
+	<div class="overlay imageWaiter" id="overlay"></div>
+	<div class="loader imageWaiter" id="loader"><progress value="0" max="100" id="pb" style="width:220px"></progress><br><br><span id="statusProgress">Uploading File.. </span></div>
+	
+	<div class="grid fluid">
+	<div class="row">
+		<div class="span12">
+			<header class="bg-dark" data-load="header.html"><div class="navigation-bar bg-green fixed-top opacity shadow">
+    				<div class="navigation-bar-content container">
+        					<a href="http://bangladesh.asinha.co.in/" class="element">Lyfflip</a>
+					<span class="element-divider"></span>
+					<div class="element" style="visibility:hidden"></div>
+					<div class="element" style="visibility:hidden"></div>
+					<div class="element" style="visibility:hidden"></div>
+					<div class="element" style="visibility:hidden"></div>
+					<div class="element" style="visibility:hidden"></div>
+					<div class="element" style="visibility:hidden"></div>
+					<div class="element" style="visibility:hidden"></div>
+					<div class="element" style="visibility:hidden"></div>
+					<div class="element" style="visibility:hidden"></div>
+					<div class="element" style="visibility:hidden"></div>
+					<div class="element" style="visibility:hidden"></div>
+					<div class="element" style="visibility:hidden"></div>
+					<div class="element" style="visibility:hidden"></div>
+					<div class="element" style="visibility:hidden"></div>
+					<div class="element" style="visibility:hidden"></div>
+					<div class="element" style="visibility:hidden"></div>
+					<div class="element" style="visibility:hidden"></div>
+					<div class="element" style="visibility:hidden"></div>
+					<div class="element dropper">
+            						<a class="dropdown-toggle" href="http://bangladesh.asinha.co.in/panel/manageindustries.php#">Welcome Administrator</a>
+            							<ul class="dropdown-menu" id="community-submenu" data-role="dropdown" style="display: none;">
+                							
+                								<li><a href="http://bangladesh.asinha.co.in/panel/manageaccount.php">Manage Account</a></li>
+                								<li class="divider"></li>
+                								<li><a href="http://bangladesh.asinha.co.in/panel/sessout.php">Log Out</a></li>
+            							</ul>
+        					</div>
+        					
+        					<span class="element-divider place-right"></span>
+    				</div>
+				</div>
+			</header>
+		</div>
+	</div>
+	<div class="row">
+		
+	<div class="span2" style="position:fixed; height:100%">
+		<nav class="sidebar">
+		       		       <ul>
+			<li class="title">Menu List</li>
+			<li><a href="http://bangladesh.asinha.co.in/panel/dashboard.php"><i class="icon-home"></i>Dashboard</a></li>
+			<li class="stick bg-yellow">
+            				<a href="http://bangladesh.asinha.co.in/panel/manageaboutus.php"><i class="icon-user"></i>About Us</a>
+            					
+        			</li>
+			<li class="stick bg-yellow">
+            				<a href="http://bangladesh.asinha.co.in/panel/managebservices.php"><i class="icon-user"></i>Services</a>
+            					
+        			</li>
+			<li class="stick bg-yellow">
+            				<a href="http://bangladesh.asinha.co.in/panel/manageindustries.php" class="bg-darkGreen fg-white"><i class="icon-user"></i>Industries</a>
+            					
+        			</li>
+			<li class="stick bg-yellow">
+            				<a href="http://bangladesh.asinha.co.in/panel/manageteam.php"><i class="icon-user"></i>Team</a>
+            					
+        			</li>
+			<li class="stick bg-yellow">
+            				<a href="http://bangladesh.asinha.co.in/panel/managecareer.php"><i class="icon-user"></i>Career</a>
+            					
+        			</li>
+			<li class="stick bg-yellow">
+            				<a href="http://bangladesh.asinha.co.in/panel/managepositions.php"><i class="icon-user"></i>Positions</a>
+            					
+        			</li>
+			<li class="stick bg-yellow">
+            				<a href="http://bangladesh.asinha.co.in/panel/managewhyus.php"><i class="icon-user"></i>How We Help</a>
+            					
+        			</li>
+			<li class="stick bg-yellow">
+            				<a href="http://bangladesh.asinha.co.in/panel/manageadvantages.php"><i class="icon-user"></i>Advantages</a>
+            					
+        			</li>
+			<li class="stick bg-yellow">
+            				<a href="http://bangladesh.asinha.co.in/panel/manageslides.php"><i class="icon-user"></i>Slides</a>
+            					
+        			</li>
+			<li class="stick bg-yellow">
+            				<a href="http://bangladesh.asinha.co.in/panel/manageaddress.php"><i class="icon-user"></i>Business Address</a>
+            					
+        			</li>
+			<li class="stick bg-yellow">
+            				<a href="http://bangladesh.asinha.co.in/panel/manageapplications.php"><i class="icon-user"></i>Job Applications</a>
+            					
+        			</li>
+			<li class="stick bg-yellow">
+            				<a href="http://bangladesh.asinha.co.in/panel/managecontacts.php"><i class="icon-user"></i>Contacts</a>
+            					
+        			</li>
+                                               
+		      </ul>		</nav>
+	</div>
+	<div class="span10 offset2">
+	<div class="grid fluid">
+<div class="row">
+	<div class="span11">
+		<div id="jtbl"><div class="jtable-main-container"><div class="jtable-busy-panel-background jtable-busy-panel-background-invisible" style="display: none; width: 931px; height: 85px;"></div><div class="jtable-busy-message" style="display: none;"></div><div class="jtable-title"><div class="jtable-title-text">List Of Industries</div><div class="jtable-toolbar"><span class="jtable-toolbar-item jtable-toolbar-item-add-record" style="overflow: hidden; padding-bottom: 2px; height: 24px;"><span class="jtable-toolbar-item-icon"></span><span class="jtable-toolbar-item-text">Add New Record</span></span></div></div><table class="jtable"><thead><tr><th class="jtable-column-header" style="width: 10%;"><div class="jtable-column-header-container"><span class="jtable-column-header-text">Title</span><div class="jtable-column-resize-handler"></div></div></th><th class="jtable-column-header" style="width: 10%;"><div class="jtable-column-header-container"><span class="jtable-column-header-text"></span><div class="jtable-column-resize-handler"></div></div></th><th class="jtable-column-header" style="width: 10%;"><div class="jtable-column-header-container"><span class="jtable-column-header-text"></span></div></th><th class="jtable-command-column-header" style="width: 1%;"></th><th class="jtable-command-column-header" style="width: 1%;"></th></tr></thead><tbody><tr class="jtable-data-row jtable-row-even" data-record-key="05fe7411-f8fe-11e5-99fc-0a1ffbf83aa9"><td> Steel Industry</td><td><div class="fg-cyan" style="cursor:pointer">Show Body</div></td><td><div class="fg-amber" style="cursor:pointer">Show Image</div></td><td class="jtable-command-column editColumn"><button title="Edit Client Details" class="jtable-command-button jtable-edit-command-button"><span>Edit Client Details</span></button></td><td class="jtable-command-column deleteColumn"><button title="Delete" class="jtable-command-button jtable-delete-command-button"><span>Delete</span></button></td></tr><tr class="jtable-data-row" data-record-key="2abc7f24-fd8d-11e5-8fb3-0a1ffbf83aa9"><td>Garment Industry</td><td><div class="fg-cyan" style="cursor:pointer">Show Body</div></td><td><div class="fg-amber" style="cursor:pointer">Show Image</div></td><td class="jtable-command-column editColumn"><button title="Edit Client Details" class="jtable-command-button jtable-edit-command-button"><span>Edit Client Details</span></button></td><td class="jtable-command-column deleteColumn"><button title="Delete" class="jtable-command-button jtable-delete-command-button"><span>Delete</span></button></td></tr><tr class="jtable-data-row jtable-row-even" data-record-key="4920caf0-fd8d-11e5-8fb3-0a1ffbf83aa9"><td>Pharmaceutical Industry of Bangladesh</td><td><div class="fg-cyan" style="cursor:pointer">Show Body</div></td><td><div class="fg-amber" style="cursor:pointer">Show Image</div></td><td class="jtable-command-column editColumn"><button title="Edit Client Details" class="jtable-command-button jtable-edit-command-button"><span>Edit Client Details</span></button></td><td class="jtable-command-column deleteColumn"><button title="Delete" class="jtable-command-button jtable-delete-command-button"><span>Delete</span></button></td></tr><tr class="jtable-data-row" data-record-key="bc939a00-fd8d-11e5-8fb3-0a1ffbf83aa9"><td>Shipping Industry </td><td><div class="fg-cyan" style="cursor:pointer">Show Body</div></td><td><div class="fg-amber" style="cursor:pointer">Show Image</div></td><td class="jtable-command-column editColumn"><button title="Edit Client Details" class="jtable-command-button jtable-edit-command-button"><span>Edit Client Details</span></button></td><td class="jtable-command-column deleteColumn"><button title="Delete" class="jtable-command-button jtable-delete-command-button"><span>Delete</span></button></td></tr><tr class="jtable-data-row jtable-row-even" data-record-key="d45f5966-f8fd-11e5-99fc-0a1ffbf83aa9"><td>Tea Industry</td><td><div class="fg-cyan" style="cursor:pointer">Show Body</div></td><td><div class="fg-amber" style="cursor:pointer">Show Image</div></td><td class="jtable-command-column editColumn"><button title="Edit Client Details" class="jtable-command-button jtable-edit-command-button"><span>Edit Client Details</span></button></td><td class="jtable-command-column deleteColumn"><button title="Delete" class="jtable-command-button jtable-delete-command-button"><span>Delete</span></button></td></tr><tr class="jtable-data-row" data-record-key="eeb34aec-fd8d-11e5-8fb3-0a1ffbf83aa9"><td>Jute Industry</td><td><div class="fg-cyan" style="cursor:pointer">Show Body</div></td><td><div class="fg-amber" style="cursor:pointer">Show Image</div></td><td class="jtable-command-column editColumn"><button title="Edit Client Details" class="jtable-command-button jtable-edit-command-button"><span>Edit Client Details</span></button></td><td class="jtable-command-column deleteColumn"><button title="Delete" class="jtable-command-button jtable-delete-command-button"><span>Delete</span></button></td></tr><tr class="jtable-data-row jtable-row-even" data-record-key="597be546-e14f-11e6-8d4e-0a1ffbf83aa9" style="display: table-row;"><td>Construction Industry</td><td><div class="fg-cyan" style="cursor:pointer">Show Body</div></td><td><div class="fg-amber" style="cursor:pointer">Show Image</div></td><td class="jtable-command-column editColumn"><button title="Edit Client Details" class="jtable-command-button jtable-edit-command-button"><span>Edit Client Details</span></button></td><td class="jtable-command-column deleteColumn"><button title="Delete" class="jtable-command-button jtable-delete-command-button"><span>Delete</span></button></td></tr></tbody></table><div class="jtable-column-resize-bar" style="display: none;"></div><div class="jtable-column-selection-container"></div></div></div>
+	</div>
+</div>
+<script type="text/javascript">
+window.onload = init;
+function uploadProgress(evt)
+{
+	//console.log('updateProgress');
+    if (evt.lengthComputable) {
+            var percentComplete = (evt.loaded / evt.total)*100;
+            console.log(percentComplete);
+	$("#pb").attr('value',percentComplete);
+	if(percentComplete==100)
+	{
+		$("#pb").attr("value",0);
+		$("#statusProgress").html("Saving File...");
+	}
+    } else {
+            // Unable to compute progress information since the total size is unknown
+            console.log('unable to complete');
+    }
+}
+function saveProgress(evt)
+{
+	//console.log('updateProgress');
+    if (evt.lengthComputable) {
+            var percentComplete = (evt.loaded / evt.total)*100;
+            console.log(percentComplete);
+	$("#pb").attr('value',percentComplete);
+	if(percentComplete==100)
+	{
+		$("#pb").attr("value",0);
+		$("#statusProgress").html("Uploading File...");
+	}
+    } else {
+            // Unable to compute progress information since the total size is unknown
+            console.log('unable to complete');
+    }
+}
+function init()
+{
+	$('#jtbl').jtable({
+		
+    title: "List Of Industries",
+        actions: {
+            
+            createAction: "getRequest.php?specific=industryinsert",
+            updateAction: "getRequest.php?specific=industryupdate",
+            deleteAction: "getRequest.php?specific=industrydelete",
+            listAction: "getRequest.php?specific=industry"
+
+        },
+        
+        
+        messages: {
+            serverCommunicationError: 'An error occured while communicating to the server.',
+            loadingMessage: 'Loading records...',
+            noDataAvailable: 'No data available!',
+            addNewRecord: 'Add New Record',
+            editRecord: 'Edit Client Details',
+            areYouSure: 'Are you sure?',
+            deleteConfirmation: 'This record will be deleted. Are you sure?',
+            save: 'Save',
+            saving: 'Saving',
+            cancel: 'Cancel',
+            deleteText: 'Delete',
+            deleting: 'Deleting',
+            error: 'Error',
+            close: 'Close',
+            cannotLoadOptionsFor: 'Can not load options for field {0}',
+            pagingInfo: 'Showing {0}-{1} of {2}',
+            pageSizeChangeLabel: 'Row count',
+            gotoPageLabel: 'Go to page',
+            canNotDeletedRecords: 'Can not deleted {0} of {1} records!',
+            deleteProggress: 'Deleted {0} of {1} records, processing...'
+        },
+        fields: {
+        
+            industryid: {
+            
+                key: true,
+                list: false,
+                edit: false
+            
+            },
+           
+        
+            industrytitle: {
+            
+            title:"Title",
+            width:"10%",
+            inputClass:"validate[required]",
+            
+            
+            
+            
+            
+            
+            
+            type:"text"
+            
+            },
+           
+        
+            industrybody: {
+            
+            title:"Body",
+            width:"10%",
+            inputClass:"",
+            
+            
+            
+            
+            
+            
+            
+            type:"textarea",
+		list:false
+            
+            },
+           
+        
+            imgloc: {
+            
+            title:"imgloc",
+            width:"10%",
+            inputClass:"",
+            
+            
+            
+            
+            
+            
+            
+            type:"hidden"
+            
+            },
+		industryBodyShow:{
+			title:'',
+			create:false,
+			edit:false,
+			display:function(d)
+			{
+				var ret = $( '<div class="fg-cyan" style="cursor:pointer">Show Body</div>' );
+				ret.click(function()
+				{
+					$('#mod').dialog({
+						title:d.record.industrytitle+' Body',
+						modal:true,
+						autoOpen:false,
+						width:900,
+						height:500,
+						buttons:{
+							"Ok":function()
+							{
+								$(this).dialog('close');
+							}
+						}
+					});
+					$('#mod').html(d.record.industrybody);
+					$('#mod').dialog('open');
+				});
+				return ret;
+			}
+		},
+           imgUp:{
+		title:"Upload Image",
+		list:false,
+		input:function(d)
+		{
+			var ret = $('<input type="file" id="imgFyl" />');
+			ret.change(function()
+			{
+				$("#pb").attr("value","0");
+				$("#statusProgress").html("Uploading File...");
+				$(".imageWaiter").show();
+				var file=document.getElementById("imgFyl").files[0];
+				var fd=new FormData();
+				fd.append("picfile",file);
+				$.ajax({
+					type:"post",
+					url:"uploadImg.php",
+					processData:false,
+					contentType:false,
+					data:fd,
+					xhr:function()
+					{
+						var myXhr = $.ajaxSettings.xhr();
+						if(myXhr.upload)
+						{
+							myXhr.upload.addEventListener('progress',uploadProgress,false);
+						}
+						myXhr.addEventListener('progress',saveProgress,false);
+						return myXhr;
+						
+					},
+					success:function(msg)
+					{
+						$("#Edit-imgloc").val(msg);
+						$(".imageWaiter").hide();
+					}
+				});
+			});
+			return ret;
+		}
+	},
+	showImg:{
+		title:'',
+		create:false,
+		edit:false,
+		display:function(dx)
+		{
+			var ret = $( '<div class="fg-amber" style="cursor:pointer">Show Image</div>' );
+			ret.click(function()
+			{
+				$('#mod').dialog({
+					title:'About Us Body',
+					modal:true,
+					autoOpen:false,
+					width:900,
+					height:500,
+					buttons:{
+						"Ok":function()
+						{
+							$(this).dialog('close');
+						}
+					}
+				});
+				$('#mod').html('<img class="img-responsive" src="../wp-content/uploads/'+dx.record.imgloc+'" />');
+				$('#mod').dialog('open');
+			});
+			return ret;
+		}
+	}
+        
+
+    },
+    formCreated: function (event, data) {
+                data.form.validationEngine();
+		if($("#Edit-industrybody").tinymce()!=null)
+	{
+		$("#Edit-industrybody").tinymce().remove();
+	}
+	$('#Edit-industrybody').tinymce({
+                        // Location of TinyMCE script
+                        script_url : 'js/tinymce/tinymce.min.js',
+
+                        // General options
+                        theme : "modern",
+                        plugins : "pagebreak,layer,table,save,insertdatetime,preview,media,searchreplace,print,contextmenu,paste,directionality,fullscreen,noneditable,visualchars,nonbreaking,template,lists,link,image",
+
+                        // Theme options
+                        theme_advanced_buttons1 : "save,newdocument,|,bold,italic,underline,strikethrough,|,justifyleft,justifycenter,justifyright,justifyfull,styleselect,formatselect,fontselect,fontsizeselect",
+                        theme_advanced_buttons2 : "cut,copy,paste,pastetext,pasteword,|,search,replace,|,bullist,numlist,|,outdent,indent,blockquote,|,undo,redo,|,link,unlink,anchor,image,cleanup,help,code,|,insertdate,inserttime,preview,|,forecolor,backcolor",
+                        theme_advanced_buttons3 : "tablecontrols,|,hr,removeformat,visualaid,|,sub,sup,|,charmap,emotions,iespell,media,advhr,|,print,|,ltr,rtl,|,fullscreen",
+                        theme_advanced_buttons4 : "insertlayer,moveforward,movebackward,absolute,|,styleprops,|,cite,abbr,acronym,del,ins,attribs,|,visualchars,nonbreaking,template,pagebreak",
+                        theme_advanced_toolbar_location : "top",
+                        theme_advanced_toolbar_align : "left",
+                        theme_advanced_statusbar_location : "bottom",
+                        theme_advanced_resizing : true,
+
+                        // Example content CSS (should be your site CSS)
+                        content_css : "css/content.css",
+
+                        // Drop lists for link/image/media/template dialogs
+                        template_external_list_url : "lists/template_list.js",
+                        external_link_list_url : "lists/link_list.js",
+                        external_image_list_url : "lists/image_list.js",
+                        media_external_list_url : "lists/media_list.js",
+
+                        // Replace values for the template plugin
+                        template_replace_values : {
+                                username : "Some User",
+                                staffid : "991234"
+                        }
+                });
+                $(".decimalMask").maskMoney({thousands:'', decimal:'.'});
+                $(".integerMask").mask('000000000');
+            },
+            
+            formSubmitting: function (event, data) {
+		var htm = $("#Edit-industrybody").html();
+	htm = htm.replace(/'/g,'\"');
+	htm = htm.replace(/(\r\n|\n|\r)/gm,"");
+	$("#Edit-industrybody").html(htm).val(htm);
+                return data.form.validationEngine('validate');
+            },
+            formClosed: function (event, data) {
+                data.form.validationEngine('hide');
+                data.form.validationEngine('detach');
+            }
+    
+	});
+	$('#jtbl').jtable('load');
+}
+</script>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+    $("a.dpdown-toggle").click(function (evt) {
+        evt.preventDefault();
+        var menu = $(this).closest("li").children(".dpdown-menu");
+        if (menu.is(":visible")) {
+            menu.slideUp();
+        }
+        else {
+            menu.slideDown();
+        }
+    });
+   var src=document.URL;
+	
+   src=src.split("/")[src.split("/").length-1];
+	src=src.split(".")[0];
+   	$("a[href^="+src+"]").addClass("bg-darkGreen").addClass("fg-white");
+	$("a[href^="+src+"]").closest(".dpdown-menu").slideDown();
+	$("a[href^="+src+"]").closest(".stick").children(".dpdown-toggle").addClass("bg-crimson");
+</script>
+
+<div class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-draggable ui-resizable" tabindex="-1" role="dialog" aria-labelledby="ui-dialog-title-1" style="display: none; z-index: 1000; outline: 0px; position: absolute;"><div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix"><span class="ui-dialog-title" id="ui-dialog-title-1">Error</span><a href="http://bangladesh.asinha.co.in/panel/manageindustries.php#" class="ui-dialog-titlebar-close ui-corner-all" role="button"><span class="ui-icon ui-icon-closethick">close</span></a></div><div class="ui-dialog-content ui-widget-content"></div><div class="ui-resizable-handle ui-resizable-n"></div><div class="ui-resizable-handle ui-resizable-e"></div><div class="ui-resizable-handle ui-resizable-s"></div><div class="ui-resizable-handle ui-resizable-w"></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se ui-icon-grip-diagonal-se" style="z-index: 1001;"></div><div class="ui-resizable-handle ui-resizable-sw" style="z-index: 1002;"></div><div class="ui-resizable-handle ui-resizable-ne" style="z-index: 1003;"></div><div class="ui-resizable-handle ui-resizable-nw" style="z-index: 1004;"></div><div class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix"><div class="ui-dialog-buttonset"><button type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">Close</span></button></div></div></div><div class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-draggable ui-resizable" tabindex="-1" role="dialog" aria-labelledby="ui-dialog-title-former" style="display: none; z-index: 1000; outline: 0px; position: absolute; height: auto; width: auto; top: 0px; left: 0px;"><div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix"><span class="ui-dialog-title" id="ui-dialog-title-former">Add New Record</span><a href="http://bangladesh.asinha.co.in/panel/manageindustries.php#" class="ui-dialog-titlebar-close ui-corner-all" role="button"><span class="ui-icon ui-icon-closethick">close</span></a></div><div id="former" class="ui-dialog-content ui-widget-content" style="width: auto; min-height: 0px; height: auto;"></div><div class="ui-resizable-handle ui-resizable-n"></div><div class="ui-resizable-handle ui-resizable-e"></div><div class="ui-resizable-handle ui-resizable-s"></div><div class="ui-resizable-handle ui-resizable-w"></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se ui-icon-grip-diagonal-se" style="z-index: 1001;"></div><div class="ui-resizable-handle ui-resizable-sw" style="z-index: 1002;"></div><div class="ui-resizable-handle ui-resizable-ne" style="z-index: 1003;"></div><div class="ui-resizable-handle ui-resizable-nw" style="z-index: 1004;"></div><div class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix"><div class="ui-dialog-buttonset"><button type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">Cancel</span></button><button type="button" id="AddRecordDialogSaveButton" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">Save</span></button></div></div></div><div class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-draggable ui-resizable" tabindex="-1" role="dialog" aria-labelledby="ui-dialog-title-2" style="display: none; z-index: 1000; outline: 0px; position: absolute; height: auto; width: auto; top: 0px; left: 0px;"><div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix"><span class="ui-dialog-title" id="ui-dialog-title-2">Edit Client Details</span><a href="http://bangladesh.asinha.co.in/panel/manageindustries.php#" class="ui-dialog-titlebar-close ui-corner-all" role="button"><span class="ui-icon ui-icon-closethick">close</span></a></div><div class="ui-dialog-content ui-widget-content" style="width: auto; min-height: 0px; height: auto;"></div><div class="ui-resizable-handle ui-resizable-n"></div><div class="ui-resizable-handle ui-resizable-e"></div><div class="ui-resizable-handle ui-resizable-s"></div><div class="ui-resizable-handle ui-resizable-w"></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se ui-icon-grip-diagonal-se" style="z-index: 1001;"></div><div class="ui-resizable-handle ui-resizable-sw" style="z-index: 1002;"></div><div class="ui-resizable-handle ui-resizable-ne" style="z-index: 1003;"></div><div class="ui-resizable-handle ui-resizable-nw" style="z-index: 1004;"></div><div class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix"><div class="ui-dialog-buttonset"><button type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">Cancel</span></button><button type="button" id="EditDialogSaveButton" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">Save</span></button></div></div></div><div class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-draggable ui-resizable" tabindex="-1" role="dialog" aria-labelledby="ui-dialog-title-3" style="display: none; z-index: 1000; outline: 0px; position: absolute;"><div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix"><span class="ui-dialog-title" id="ui-dialog-title-3">Are you sure?</span><a href="http://bangladesh.asinha.co.in/panel/manageindustries.php#" class="ui-dialog-titlebar-close ui-corner-all" role="button"><span class="ui-icon ui-icon-closethick">close</span></a></div><div class="ui-dialog-content ui-widget-content"><p><span class="ui-icon ui-icon-alert" style="float:left; margin:0 7px 20px 0;"></span><span class="jtable-delete-confirm-message"></span></p></div><div class="ui-resizable-handle ui-resizable-n"></div><div class="ui-resizable-handle ui-resizable-e"></div><div class="ui-resizable-handle ui-resizable-s"></div><div class="ui-resizable-handle ui-resizable-w"></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se ui-icon-grip-diagonal-se" style="z-index: 1001;"></div><div class="ui-resizable-handle ui-resizable-sw" style="z-index: 1002;"></div><div class="ui-resizable-handle ui-resizable-ne" style="z-index: 1003;"></div><div class="ui-resizable-handle ui-resizable-nw" style="z-index: 1004;"></div><div class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix"><div class="ui-dialog-buttonset"><button type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">Cancel</span></button><button type="button" id="DeleteDialogButton" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">Delete</span></button></div></div></div><script type="text/javascript" src="./Construction Industry_files/tinymce.min.js.download"></script><div class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-draggable ui-resizable" tabindex="-1" role="dialog" aria-labelledby="ui-dialog-title-mod" style="display: block; z-index: 1000; outline: 0px; position: absolute; height: auto; width: 900px; top: 0px; left: 0px;"><div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix"><span class="ui-dialog-title" id="ui-dialog-title-mod">About Us Body</span><a href="http://bangladesh.asinha.co.in/panel/manageindustries.php#" class="ui-dialog-titlebar-close ui-corner-all" role="button"><span class="ui-icon ui-icon-closethick">close</span></a></div><div id="mod" class="ui-dialog-content ui-widget-content" style="width: auto; min-height: 0px; height: 363.236px;"><img class="img-responsive" src="./Construction Industry_files/saved_resource"></div><div class="ui-resizable-handle ui-resizable-n"></div><div class="ui-resizable-handle ui-resizable-e"></div><div class="ui-resizable-handle ui-resizable-s"></div><div class="ui-resizable-handle ui-resizable-w"></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se ui-icon-grip-diagonal-se" style="z-index: 1001;"></div><div class="ui-resizable-handle ui-resizable-sw" style="z-index: 1002;"></div><div class="ui-resizable-handle ui-resizable-ne" style="z-index: 1003;"></div><div class="ui-resizable-handle ui-resizable-nw" style="z-index: 1004;"></div><div class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix"><div class="ui-dialog-buttonset"><button type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">Ok</span></button></div></div></div><div id="mce_117" class="mce-widget mce-tooltip mce-tooltip-n" role="presentation" style="left: 744.216px; top: 250.391px; z-index: 131070; display: none;"><div class="mce-tooltip-arrow"></div><div class="mce-tooltip-inner">Insert/edit image</div></div><div class="ui-widget-overlay" style="width: 1026px; height: 571px;"></div></body></html>
